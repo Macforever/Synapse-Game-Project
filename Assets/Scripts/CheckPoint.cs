@@ -19,6 +19,7 @@ public class CheckPoint : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.name == "Player") {
             levelManager.currentCheckPoint = gameObject;
+            Debug.Log("Activated Chechpoint " + levelManager.currentCheckPoint.name);
         }
     }
 }

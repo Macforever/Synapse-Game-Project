@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
+    private float moveVelocity;
     public float jumpHeight;
 
     public Transform groundCheck;
@@ -31,19 +32,25 @@ public class PlayerController : MonoBehaviour {
             Jump();
             doubleJump = true;
         }
-
         if ((Input.GetKeyDown(KeyCode.Space)) && doubleJump && !grounded) {
             Jump();
             doubleJump = false;
         }
+
+        moveVelocity = 0f;
+
         if (Input.GetKey(KeyCode.D)) {
             //MoveForward();
-            GetComponent<Rigidbody>().velocity = new Vector3(moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
+            //GetComponent<Rigidbody>().velocity = new Vector3(moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
+            moveVelocity = moveSpeed;
         }
         if (Input.GetKey(KeyCode.A)) {
             // MoveBackwards();
-            GetComponent<Rigidbody>().velocity = new Vector3(-moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
+            //GetComponent<Rigidbody>().velocity = new Vector3(-moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
+            moveVelocity = -moveSpeed;
         }
+        GetComponent<Rigidbody>().velocity = new Vector3(moveVelocity, GetComponent<Rigidbody>().velocity.y, 0);
+
     }
 
     public void Jump() {

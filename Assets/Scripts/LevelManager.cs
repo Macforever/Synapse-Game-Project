@@ -31,6 +31,7 @@ public class LevelManager : MonoBehaviour {
         Instantiate(deathParticles, player.transform.position, player.transform.rotation);
         player.enabled = false;
         player.GetComponent<Renderer>().enabled = false;
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         Debug.Log("Player Respawn");
         yield return new WaitForSeconds(respawnDelay);
         player.transform.position = currentCheckPoint.transform.position;

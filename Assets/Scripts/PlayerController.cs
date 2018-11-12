@@ -14,10 +14,10 @@ public class PlayerController : MonoBehaviour {
 
     private bool doubleJump;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start() {
+
+    }
 
     private void FixedUpdate() {
 
@@ -25,25 +25,17 @@ public class PlayerController : MonoBehaviour {
         this.grounded = (hitColliders.Length > 0) ? true : false;
     }
 
+    void Update() {
 
-    void Update () {
-
-
-       // if (Input.GetKey(KeyCode.Space)) {
         if (Input.GetKeyDown(KeyCode.Space) && this.grounded) {
-                //Jump();
-                GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, jumpHeight, 0);
-                doubleJump = true;
-
+            Jump();
+            doubleJump = true;
         }
 
         if ((Input.GetKeyDown(KeyCode.Space)) && doubleJump && !grounded) {
-            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, jumpHeight, 0);
+            Jump();
             doubleJump = false;
         }
-
-
-
         if (Input.GetKey(KeyCode.D)) {
             //MoveForward();
             GetComponent<Rigidbody>().velocity = new Vector3(moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
@@ -52,6 +44,9 @@ public class PlayerController : MonoBehaviour {
             // MoveBackwards();
             GetComponent<Rigidbody>().velocity = new Vector3(-moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
         }
+    }
 
+    public void Jump() {
+        GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, jumpHeight, 0);
     }
 }

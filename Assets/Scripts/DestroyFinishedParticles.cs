@@ -6,17 +6,17 @@ public class DestroyFinishedParticles : MonoBehaviour {
 
     private ParticleSystem aktualParticleSystem;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         aktualParticleSystem = GetComponent<ParticleSystem>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update() {
         if (aktualParticleSystem.isStopped) {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
-	}
+    }
     private void OnBecameInvisible() {
         Destroy(gameObject);
     }

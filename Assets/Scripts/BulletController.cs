@@ -11,6 +11,8 @@ public class BulletController : MonoBehaviour {
 
     public int pointsForKill;
 
+    public int damageToGive;
+
 
 
 	// Use this for initialization
@@ -30,9 +32,10 @@ public class BulletController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Enemy") {
-            Instantiate(enemyDeathEffect, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
-            ScoreManager.AddPoints(pointsForKill);
+            //Instantiate(enemyDeathEffect, other.transform.position, other.transform.rotation);
+            //Destroy(other.gameObject);
+            //ScoreManager.AddPoints(pointsForKill);
+            other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
         }
         Instantiate(implactEffect, transform.position, transform.rotation);
         Destroy(gameObject);

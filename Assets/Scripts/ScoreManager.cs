@@ -5,14 +5,24 @@ using TMPro; // Add the TextMesh Pro namespace to access the various functions.
 
 public class ScoreManager : MonoBehaviour {
     public static int score = 0;
+    public TextMeshProUGUI myText;
 
+    void Start() {
+
+        myText = FindObjectOfType<TextMeshProUGUI>();
+
+
+    }
     void Update() {
 
         if (score < 0) {
             score = 0;
         }
-        GetComponent<TextMeshProUGUI>().text = "Score: " + score;
+        if (myText.tag == "GameScoreScreen") {
+            myText.text = "Score: " + score;
+        }
     }
+
 
     public static void AddPoints(int pointsToAdd) {
         score += pointsToAdd;
@@ -24,4 +34,5 @@ public class ScoreManager : MonoBehaviour {
 
 
 }
+
 

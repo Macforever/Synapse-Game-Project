@@ -18,16 +18,16 @@ public class EnemyPatrol : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
-       
+    void Start() {
+
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
 
 
-        var hitColliders = Physics.OverlapSphere(wallCheck.position,wallCheckRadius, whatIsWall);
+        var hitColliders = Physics.OverlapSphere(wallCheck.position, wallCheckRadius, whatIsWall);
         this.hittingWall = (hitColliders.Length > 0) ? true : false;
 
         var edgeColliders = Physics.OverlapSphere(edgeCheck.position, wallCheckRadius, whatIsWall);
@@ -47,6 +47,6 @@ public class EnemyPatrol : MonoBehaviour {
             transform.localScale = new Vector3(1f, 1f, 1f);
             GetComponent<Rigidbody>().velocity = new Vector3(-moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
         }
-		
-	}
+
+    }
 }

@@ -119,6 +119,7 @@ MonoBehaviour:
   implactEffect: {fileID: 1722616199053376, guid: 9a8eb4af8951bb24aaa33dcbe28194ec,
     type: 2}
   pointsForKill: 200
+  damageToGive: 10
 --- !u!135 &135705832882954970
 SphereCollider:
   m_ObjectHideFlags: 1

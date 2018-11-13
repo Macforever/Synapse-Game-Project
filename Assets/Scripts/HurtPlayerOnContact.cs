@@ -2,25 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillPlayer : MonoBehaviour {
+public class HurtPlayerOnContact : MonoBehaviour {
 
-    public LevelManager levelManager;
-
-
+    public int damageToGive;
 
     // Use this for initialization
     void Start() {
-        levelManager = FindObjectOfType<LevelManager>();
+
+
     }
 
     // Update is called once per frame
     void Update() {
 
     }
-
     private void OnTriggerEnter(Collider other) {
         if (other.name == "Player") {
-            levelManager.RespawnPlayer();
+            HealthManager.HurtPlayer(damageToGive);
         }
     }
 }

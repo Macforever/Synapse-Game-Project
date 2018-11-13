@@ -33,6 +33,7 @@ public class LevelManager : MonoBehaviour {
         Instantiate(deathParticles, player.transform.position, player.transform.rotation);
         player.enabled = false;
         player.GetComponent<Renderer>().enabled = false;
+        player.GetComponent<Rigidbody>().useGravity = false;
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         ScoreManager.AddPoints(-PointPenaltyOnDeath);
         Debug.Log("Player Respawn");
@@ -40,6 +41,7 @@ public class LevelManager : MonoBehaviour {
         player.transform.position = currentCheckPoint.transform.position;
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
+        player.GetComponent<Rigidbody>().useGravity = true;
         Instantiate(respawnParticles, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
     }
 }

@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour {
 
     public float respawnDelay;
 
-    private CameraController camera;
+    private CameraController mycamera;
 
 
 
@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour {
     void Start () {
         player = FindObjectOfType<PlayerController>();
 
-        camera = FindObjectOfType<CameraController>();
+        mycamera = FindObjectOfType<CameraController>();
 		
 	}
 	
@@ -38,7 +38,7 @@ public class LevelManager : MonoBehaviour {
         Instantiate(deathParticles, player.transform.position, player.transform.rotation);
         player.enabled = false;
         player.GetComponent<Renderer>().enabled = false;
-        camera.isFollowing = false;
+        mycamera.isFollowing = false;
         //player.GetComponent<Rigidbody>().useGravity = false;
         //player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         ScoreManager.AddPoints(-PointPenaltyOnDeath);
@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour {
         player.transform.position = currentCheckPoint.transform.position;
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
-        camera.isFollowing = true;
+        mycamera.isFollowing = true;
         //player.GetComponent<Rigidbody>().useGravity = true;
         Instantiate(respawnParticles, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
     }

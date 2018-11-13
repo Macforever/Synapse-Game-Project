@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour {
 
     private bool doubleJump;
 
+    public Transform firePoint;
+    public GameObject bullet;
+
+
+
     // Use this for initialization
     void Start() {
 
@@ -51,6 +56,11 @@ public class PlayerController : MonoBehaviour {
         }
         GetComponent<Rigidbody>().velocity = new Vector3(moveVelocity, GetComponent<Rigidbody>().velocity.y, 0);
 
+
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+
+        }
     }
 
     public void Jump() {

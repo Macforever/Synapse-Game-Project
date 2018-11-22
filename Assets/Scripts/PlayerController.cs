@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 
         var hitColliders = Physics.OverlapSphere(groundCheck.position, groundCheckRadius, whatIsGround);
         this.grounded = (hitColliders.Length > 0) ? true : false;
+        GetComponent<Rigidbody>().AddForce(Physics.gravity * (GetComponent<Rigidbody>().mass * GetComponent<Rigidbody>().mass));
     }
 
     void Update() {

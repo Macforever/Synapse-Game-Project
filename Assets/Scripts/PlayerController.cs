@@ -34,29 +34,27 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
+        movePlayer();
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space) && this.grounded) {
+    public void jumpManager() {
+        if (this.grounded) {
             Jump();
             doubleJump = true;
         }
-        if ((Input.GetKeyDown(KeyCode.Space)) && doubleJump && !grounded) {
-            Jump();
+       if(doubleJump && !grounded) {
+              Jump();
             doubleJump = false;
         }
         
-        movePlayer();
-
-
-        if (Input.GetKeyDown(KeyCode.Return)) {
-            if (ammoManager.GetCurrentAmmo() >= 1) {
-                Instantiate(bullet, firePoint.position, firePoint.rotation);
-                ammoManager.DecraseAmmo(1);
-            }
-
-        }
     }
 
-
+    public void shootBullet() {
+        if (ammoManager.GetCurrentAmmo() >= 1) {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            ammoManager.DecraseAmmo(1);
+        }
+    }
 
     public void MoveForward(bool moveForward) {
         if (moveForward)

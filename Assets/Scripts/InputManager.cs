@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour {
+ 
     private PlayerController playerController;
 
     // Use this for initialization
@@ -10,14 +11,20 @@ public class InputManager : MonoBehaviour {
         playerController = FindObjectOfType<PlayerController>();
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         if (Input.GetKey(KeyCode.D)) {
             playerController.MoveForward(true);
         }
         if (Input.GetKey(KeyCode.A)) {
             playerController.MoveForward(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            playerController.shootBullet();
+        }
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            playerController.jumpManager();
         }
     }
 }

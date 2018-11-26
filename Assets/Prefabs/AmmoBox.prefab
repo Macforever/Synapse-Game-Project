@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23848153007565450}
   - component: {fileID: 65115057262878854}
   - component: {fileID: 114218172010431338}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AmmoBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae97d3fe69244c84f970151415f94a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 5

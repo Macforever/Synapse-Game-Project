@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour {
     public GameObject bullet;
     private AmmoManager ammoManager;
 
+    public float knockback;
+    public float knockbackLength;
+    public float knockbackCount;
+    public bool knockFromRight;
+
 
     void Start() {
         ammoManager = FindObjectOfType<AmmoManager>();
@@ -65,8 +70,20 @@ public class PlayerController : MonoBehaviour {
 
 
     public void movePlayer() {
-        GetComponent<Rigidbody>().velocity = new Vector3(moveVelocity, GetComponent<Rigidbody>().velocity.y, 0);
-        moveVelocity = 0f;
+        if (knockbackCount <= 0) {
+            GetComponent<Rigidbody>().velocity = new Vector3(moveVelocity, GetComponent<Rigidbody>().velocity.y, 0);
+            moveVelocity = 0f;
+        }
+        else {
+            if (knockFromRight) {
+                GetComponent<Rigidbody>().velocity = new Vector3(-knockback, knockback, 0);
+            }
+            else {
+                GetComponent<Rigidbody>().velocity = new Vector3(knockback, knockback, 0);
+            }
+            knockbackCount -= Time.deltaTime;
+        }
+
     }
 
 

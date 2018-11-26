@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198665925749374092}
   - component: {fileID: 199630892000879432}
   - component: {fileID: 114826853329037890}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletDestroyParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

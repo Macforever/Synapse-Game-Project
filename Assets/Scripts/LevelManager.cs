@@ -49,6 +49,7 @@ public class LevelManager : MonoBehaviour {
         Debug.Log("Player Respawn");
         yield return new WaitForSeconds(respawnDelay);
         player.transform.position = currentCheckPoint.transform.position;
+        player.knockbackCount = 0;
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
         healthManager.FullHealth();

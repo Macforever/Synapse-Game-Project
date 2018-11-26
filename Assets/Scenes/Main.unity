@@ -4274,6 +4274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgToGive: 50
+  bounceOnEnemy: 5
 --- !u!4 &1281208351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4229241758037610, guid: 0ef02d9d24437054bb6afa0d05b91299,

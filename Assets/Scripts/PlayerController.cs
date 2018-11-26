@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float moveSpeed;
+    private float moveSpeed;
     private float moveVelocity;
     public float jumpHeight;
 
@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour {
 
     void Start() {
         ammoManager = FindObjectOfType<AmmoManager>();
-
+        setMovespeed(5);
+        moveVelocity = 0f;
     }
 
     private void FixedUpdate() {
@@ -42,20 +43,8 @@ public class PlayerController : MonoBehaviour {
             Jump();
             doubleJump = false;
         }
-
-        moveVelocity = 0f;
-
-        if (Input.GetKey(KeyCode.D)) {
-            //MoveForward();
-            //GetComponent<Rigidbody>().velocity = new Vector3(moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
-            moveVelocity = moveSpeed;
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            // MoveBackwards();
-            //GetComponent<Rigidbody>().velocity = new Vector3(-moveSpeed, GetComponent<Rigidbody>().velocity.y, 0);
-            moveVelocity = -moveSpeed;
-        }
-        GetComponent<Rigidbody>().velocity = new Vector3(moveVelocity, GetComponent<Rigidbody>().velocity.y, 0);
+        
+        movePlayer();
 
 
         if (Input.GetKeyDown(KeyCode.Return)) {
@@ -65,6 +54,30 @@ public class PlayerController : MonoBehaviour {
             }
 
         }
+    }
+
+
+
+    public void MoveForward(bool moveForward) {
+        if (moveForward)
+            setMoveVelocity(moveSpeed);
+        else
+            setMoveVelocity(-moveSpeed);
+    }
+
+
+    public void movePlayer() {
+        GetComponent<Rigidbody>().velocity = new Vector3(moveVelocity, GetComponent<Rigidbody>().velocity.y, 0);
+        moveVelocity = 0f;
+    }
+
+
+    public void setMoveVelocity(float value) {
+        this.moveVelocity = value;
+    }
+
+    public void setMovespeed(float moveSpeed) {
+        this.moveSpeed = moveSpeed;
     }
 
     public void Jump() {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AmmoManager : MonoBehaviour {
     public int maxAmmo;
-    public static int currentAmmo;
+    private int currentAmmo;
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +14,10 @@ public class AmmoManager : MonoBehaviour {
     public int GetCurrentAmmo() {
         return currentAmmo;
     }
-    public static void IncreaseAmmo(int value) {
+    public void IncreaseAmmo(int value) {
         currentAmmo += value;
     }
-    public static void DecraseAmmo(int value) {
+    public void DecraseAmmo(int value) {
         currentAmmo -= value;
         if(currentAmmo < 0) {
             currentAmmo = 0;

@@ -3373,7 +3373,7 @@ Prefab:
     - target: {fileID: 114218172010431338, guid: d5b3076e65658e04aa6244b920c6b3ac,
         type: 2}
       propertyPath: pointsToAdd
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b3076e65658e04aa6244b920c6b3ac, type: 2}
@@ -6330,7 +6330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4854eb25115674ab054f4cf6568f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 0
+  maxAmmo: 10
 --- !u!4 &1989634580
 Transform:
   m_ObjectHideFlags: 0

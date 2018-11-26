@@ -17,11 +17,11 @@ public class PlayerController : MonoBehaviour {
 
     public Transform firePoint;
     public GameObject bullet;
+    private AmmoManager ammoManager;
 
 
-
-    // Use this for initialization
     void Start() {
+        ammoManager = FindObjectOfType<AmmoManager>();
 
     }
 
@@ -59,7 +59,10 @@ public class PlayerController : MonoBehaviour {
 
 
         if (Input.GetKeyDown(KeyCode.Return)) {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            if (ammoManager.GetCurrentAmmo() >= 1) {
+                Instantiate(bullet, firePoint.position, firePoint.rotation);
+                ammoManager.DecraseAmmo(1);
+            }
 
         }
     }

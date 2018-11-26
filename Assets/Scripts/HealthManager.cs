@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro; // Add the TextMesh Pro namespace to access the various functions.
 
 public class HealthManager : MonoBehaviour {
-    public TextMeshProUGUI myHealthText;
+    public TextMeshProUGUI myHealthScreen;
 
     public int maxPlayerHealth;
     public static int playerHealth;
@@ -17,7 +17,7 @@ public class HealthManager : MonoBehaviour {
     // Use this for initialization
     void Start() {
         FullHealth();
-        myHealthText = FindObjectOfType<TextMeshProUGUI>();
+       // myHealthText = FindObjectOfType<TextMeshProUGUI>();
         levelmanager = FindObjectOfType<LevelManager>();
         isDeath = false;
 
@@ -31,9 +31,8 @@ public class HealthManager : MonoBehaviour {
             isDeath = true;
         }
 
-
-        if (myHealthText.tag == "HealthPointsScreen") {
-            myHealthText.text = "Health: " + playerHealth;
+        if (myHealthScreen.tag == "HealthPointsScreen") {
+            myHealthScreen.text = "Health: " + playerHealth;
         }
 
     }

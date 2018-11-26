@@ -5,11 +5,11 @@ using TMPro; // Add the TextMesh Pro namespace to access the various functions.
 
 public class ScoreManager : MonoBehaviour {
     public static int score = 0;
-    public TextMeshProUGUI myText;
+    public TextMeshProUGUI ScooreScreen;
 
     void Start() {
 
-        myText = FindObjectOfType<TextMeshProUGUI>();
+       // myText = FindObjectOfType<TextMeshProUGUI>();
 
 
     }
@@ -18,8 +18,8 @@ public class ScoreManager : MonoBehaviour {
         if (score < 0) {
             score = 0;
         }
-        if (myText.tag == "GameScoreScreen") {
-            myText.text = "Score: " + score;
+        if (ScooreScreen.tag == "GameScoreScreen") {
+            ScooreScreen.text = "Score: " + score;
         }
     }
 

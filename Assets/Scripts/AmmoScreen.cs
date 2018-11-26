@@ -9,7 +9,7 @@ public class AmmoScreen : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        myScreenAmmo = FindObjectOfType<TextMeshProUGUI>();
+       // myScreenAmmo = FindObjectOfType<TextMeshProUGUI>();
         ammoManager = FindObjectOfType<AmmoManager>();
 
     }

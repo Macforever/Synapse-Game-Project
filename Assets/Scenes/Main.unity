@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b783ea6e2f0ed68428e839e0662d44e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myScreenAmmo: {fileID: 0}
+  myScreenAmmo: {fileID: 756006399}
 --- !u!114 &756006399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b38a70f9c4fe524bb2994e5e9e1e965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myHealthText: {fileID: 0}
+  myHealthScreen: {fileID: 988384082}
   maxPlayerHealth: 100
   isDeath: 0
 --- !u!1001 &1039174104
@@ -3963,7 +3963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1188aa1c807d54cb6065431a84573b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myText: {fileID: 0}
+  ScooreScreen: {fileID: 1220636427}
 --- !u!114 &1220636427
 MonoBehaviour:
   m_ObjectHideFlags: 0

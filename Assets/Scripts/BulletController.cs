@@ -8,6 +8,7 @@ public class BulletController : MonoBehaviour {
     public PlayerController player;
     public GameObject enemyDeathEffect;
     public GameObject implactEffect;
+    public float destroytime;
 
 
     public int pointsForKill;
@@ -27,9 +28,10 @@ public class BulletController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponent<Rigidbody>().velocity = new Vector3(speed, GetComponent<Rigidbody>().velocity.y, GetComponent<Rigidbody>().velocity.z);
 
-	}
+        GetComponent<Rigidbody>().velocity = new Vector3(speed, GetComponent<Rigidbody>().velocity.y, GetComponent<Rigidbody>().velocity.z);
+        Destroy(gameObject, destroytime);
+    }
 
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Enemy") {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    private float moveSpeed;
+    public float moveSpeed;
     private float moveVelocity;
     public float jumpHeight;
 

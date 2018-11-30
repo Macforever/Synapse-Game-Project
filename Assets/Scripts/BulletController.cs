@@ -9,6 +9,7 @@ public class BulletController : MonoBehaviour {
     public GameObject enemyDeathEffect;
     public GameObject implactEffect;
 
+
     public int pointsForKill;
 
     public int damageToGive;

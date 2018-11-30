@@ -1317,6 +1317,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4618227175374456, guid: c5faa2d2fd0ca7740bdbf64bf35b653b,
     type: 2}
   m_PrefabInternal: {fileID: 557901186}
+--- !u!1 &625722111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625722113}
+  - component: {fileID: 625722112}
+  m_Layer: 0
+  m_Name: Shoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &625722112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 625722111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321be138e2362864885f5dd85a470a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootDelay: 0.2
+  firePoint: {fileID: 2037046339}
+  bullet: {fileID: 1528410591061052, guid: 3843d7c197183084fa756ae43142b995, type: 2}
+--- !u!4 &625722113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 625722111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1593763994}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &626117054
 Prefab:
   m_ObjectHideFlags: 0
@@ -4435,6 +4478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d7762f5eb4acf4f9990dc704132774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shoot: {fileID: 0}
 --- !u!4 &1398019954
 Transform:
   m_ObjectHideFlags: 0
@@ -4825,12 +4869,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  firePoint: {fileID: 2037046339}
-  bullet: {fileID: 1528410591061052, guid: 3843d7c197183084fa756ae43142b995, type: 2}
   knockback: 10
   knockbackLength: 0.2
   knockbackCount: 0
   knockFromRight: 0
+  shoot: {fileID: 625722112}
 --- !u!65 &1593763991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4898,6 +4941,7 @@ Transform:
   - {fileID: 1890567058}
   - {fileID: 2037046339}
   - {fileID: 1276671392}
+  - {fileID: 625722113}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

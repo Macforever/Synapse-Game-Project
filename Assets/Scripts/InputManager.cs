@@ -5,10 +5,12 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
  
     private PlayerController playerController;
+    public Shoot shoot;
 
     // Use this for initialization
     void Start () {
         playerController = FindObjectOfType<PlayerController>();
+        shoot = FindObjectOfType<Shoot>();
 
     }
 
@@ -21,7 +23,7 @@ public class InputManager : MonoBehaviour {
             playerController.MoveForward(false);
         }
         if (Input.GetKeyDown(KeyCode.Return)) {
-            playerController.shootBullet();
+            shoot.shootBullet();
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
             playerController.jumpManager();

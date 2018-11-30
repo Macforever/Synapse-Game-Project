@@ -15,18 +15,16 @@ public class PlayerController : MonoBehaviour {
 
     private bool doubleJump;
 
-    public Transform firePoint;
-    public GameObject bullet;
-    private AmmoManager ammoManager;
 
     public float knockback;
     public float knockbackLength;
     public float knockbackCount;
     public bool knockFromRight;
 
+    public Shoot shoot;
+
 
     void Start() {
-        ammoManager = FindObjectOfType<AmmoManager>();
         setMovespeed(5);
         moveVelocity = 0f;
     }
@@ -54,12 +52,7 @@ public class PlayerController : MonoBehaviour {
         
     }
 
-    public void shootBullet() {
-        if (ammoManager.GetCurrentAmmo() >= 1) {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
-            ammoManager.DecraseAmmo(1);
-        }
-    }
+   
 
     public void MoveForward(bool moveForward) {
         if (moveForward)

@@ -6,10 +6,11 @@ public class SpeedBooster : MonoBehaviour {
     public int newSpeed;
     private float oldSpeed;
     public float boostTime;
-    public PlayerController playerController;
+    private PlayerController playerController;
 
     void Start() {
-       // playerController = GetComponent<PlayerController>();
+
+        playerController = FindObjectOfType<PlayerController>();
 
     }
 

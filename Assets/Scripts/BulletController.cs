@@ -21,8 +21,9 @@ public class BulletController : MonoBehaviour {
 	void Start () {
         player = FindObjectOfType<PlayerController>();
 
-        if(player.transform.localScale.x < 0) {
-            speed = -speed;
+     //   if(player.transform.localScale.x < 0) {
+        if (player.moveForward == false) {
+           speed = -speed;
         }
     }
 	

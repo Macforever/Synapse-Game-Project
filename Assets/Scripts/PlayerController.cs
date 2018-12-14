@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
     public float moveSpeed;
     private float moveVelocity;
     public float jumpHeight;
+    public bool moveForward;
+
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -52,11 +54,15 @@ public class PlayerController : MonoBehaviour {
         
     }
 
-       public void MoveForward(bool moveForward) {
-        if (moveForward)
+    public void MoveForward(bool moveForward) {
+        if (moveForward) {
             setMoveVelocity(moveSpeed);
-        else
+            this.moveForward = true;
+        }
+        else {
             setMoveVelocity(-moveSpeed);
+            this.moveForward = false;
+        }
     }
 
 

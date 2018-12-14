@@ -231,3 +231,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 30
+  hurtParticles: {fileID: 1964558861933642, guid: 3d8faf08fa1cb094aa7cfe639d6de03e,
+    type: 2}

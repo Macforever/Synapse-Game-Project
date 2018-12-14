@@ -52,9 +52,7 @@ public class PlayerController : MonoBehaviour {
         
     }
 
-   
-
-    public void MoveForward(bool moveForward) {
+       public void MoveForward(bool moveForward) {
         if (moveForward)
             setMoveVelocity(moveSpeed);
         else

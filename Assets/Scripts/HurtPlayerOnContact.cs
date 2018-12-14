@@ -5,6 +5,7 @@ using UnityEngine;
 public class HurtPlayerOnContact : MonoBehaviour {
 
     public int damageToGive;
+    public GameObject hurtParticles;
 
     // Use this for initialization
     void Start() {
@@ -19,6 +20,8 @@ public class HurtPlayerOnContact : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.name == "Player") {
             HealthManager.HurtPlayer(damageToGive);
+
+            Instantiate(hurtParticles, other.transform.position, other.transform.rotation);
 
             var player = other.GetComponent<PlayerController>();
             player.knockbackCount = player.knockbackLength;

@@ -2676,7 +2676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 625722113}
   - component: {fileID: 625722112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3229,8 +3229,7 @@ Prefab:
     - target: {fileID: 1743813724241036, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
   m_IsPrefabAsset: 0
@@ -3517,8 +3516,7 @@ Prefab:
     - target: {fileID: 1743813724241036, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
   m_IsPrefabAsset: 0
@@ -3918,8 +3916,7 @@ Prefab:
     - target: {fileID: 1743813724241036, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
   m_IsPrefabAsset: 0
@@ -6818,8 +6815,7 @@ Prefab:
     - target: {fileID: 1743813724241036, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
   m_IsPrefabAsset: 0
@@ -7263,7 +7259,7 @@ GameObject:
   - component: {fileID: 1276671392}
   - component: {fileID: 1276671393}
   - component: {fileID: 1276671394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: JumpDmg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8773,7 +8769,7 @@ GameObject:
   - component: {fileID: 1593763991}
   - component: {fileID: 1593763995}
   - component: {fileID: 1593763990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10531,8 +10527,7 @@ Prefab:
     - target: {fileID: 1743813724241036, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
   m_IsPrefabAsset: 0
@@ -10900,7 +10895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1890567058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10933,7 +10928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930119974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11495,7 +11490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4854eb25115674ab054f4cf6568f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 10
+  maxAmmo: 100
 --- !u!4 &1989634580
 Transform:
   m_ObjectHideFlags: 0
@@ -11790,7 +11785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2037046339}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12276,8 +12271,7 @@ Prefab:
     - target: {fileID: 1743813724241036, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7514a40be23a51849a5dc49de21dfeff, type: 2}
   m_IsPrefabAsset: 0

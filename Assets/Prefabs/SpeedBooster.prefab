@@ -110,4 +110,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newSpeed: 20
   boostTime: 5
-  playerController: {fileID: 0}

@@ -35,14 +35,12 @@ public class BulletController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Enemy") {
-            //Instantiate(enemyDeathEffect, other.transform.position, other.transform.rotation);
-            //Destroy(other.gameObject);
-            //ScoreManager.AddPoints(pointsForKill);
             other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
+        }
+        if (other.tag == "Player") {
+            return;
         }
         Instantiate(implactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
-
-        
     }
 }

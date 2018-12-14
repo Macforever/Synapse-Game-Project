@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
     public bool knockFromRight;
 
     public Shoot shoot;
-
+    private float oldSpeed;
 
     void Start() {
         setMovespeed(5);
@@ -89,4 +89,14 @@ public class PlayerController : MonoBehaviour {
     public void Jump() {
         GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, jumpHeight, 0);
     }
+    public void BoostSpeed(float time, int speed) {
+        oldSpeed = moveSpeed;
+        moveSpeed = speed;
+        StartCoroutine(Delay(time));
+    }
+    IEnumerator Delay(float boostTime) {
+        yield return new WaitForSeconds(boostTime);
+        moveSpeed = oldSpeed;
+    }
+
 }

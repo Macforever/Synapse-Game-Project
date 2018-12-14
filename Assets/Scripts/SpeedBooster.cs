@@ -19,16 +19,12 @@ public class SpeedBooster : MonoBehaviour {
 
         if (other.GetComponent<PlayerController>() != null) {
             Debug.Log("Picked SpeedBooster");
-            oldSpeed = playerController.moveSpeed;
-            playerController.moveSpeed = newSpeed;
             Destroy(gameObject);
-            StartCoroutine(Delay());
+            playerController.BoostSpeed(boostTime, newSpeed);
+
         }
     }
 
-    IEnumerator Delay() {
-        yield return new WaitForSeconds(boostTime);
-        playerController.moveSpeed = oldSpeed;
-    }
+
 
 }

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour {
-    private bool canShoot;
+    
+    public bool hasInfiniteAmmo;
     public float shootDelay;
     public Transform firePoint;
     public GameObject bullet;
+
+    private bool canShoot;
     private AmmoManager ammoManager;
 
     void Start() {
@@ -16,13 +19,17 @@ public class Shoot : MonoBehaviour {
 
 
     public void shootBullet() {
-        if (canShoot && ammoManager.GetCurrentAmmo() >= 1) {
-
+        if (!hasInfiniteAmmo) {
+            if (canShoot && ammoManager.GetCurrentAmmo() >= 1) {
+                Instantiate(bullet, firePoint.position, firePoint.rotation);
+                canShoot = false;
+                StartCoroutine(Delay());
+                ammoManager.DecraseAmmo(1);
+            }
+        } else if (canShoot) {
             Instantiate(bullet, firePoint.position, firePoint.rotation);
             canShoot = false;
             StartCoroutine(Delay());
-            ammoManager.DecraseAmmo(1);
-
         }
     }
 

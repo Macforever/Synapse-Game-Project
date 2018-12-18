@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour {
     public bool knockFromRight;
 
     public Shoot shoot;
+    public Melee sword;
     private float oldSpeed;
 
     void Start() {

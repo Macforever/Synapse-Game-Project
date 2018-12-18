@@ -6,12 +6,11 @@ public class InputManager : MonoBehaviour {
  
     private PlayerController playerController;
     public Shoot shoot;
+    public Melee melee;
 
     // Use this for initialization
     void Start () {
         playerController = FindObjectOfType<PlayerController>();
-        shoot = FindObjectOfType<Shoot>();
-
     }
 
     // Update is called once per frame
@@ -24,6 +23,9 @@ public class InputManager : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Return)) {
             shoot.shootBullet();
+        }
+        if (Input.GetKeyDown(KeyCode.M)) {
+            melee.stabbing();
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
             playerController.jumpManager();

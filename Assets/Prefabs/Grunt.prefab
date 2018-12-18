@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114225919411831494}
   - component: {fileID: 114855499328232046}
   m_Layer: 13
-  m_Name: Enemy
+  m_Name: Grunt
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,8 +172,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.81639814, z: 1}
-  m_Center: {x: 0, y: -0.09180093, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0, z: 0}
 --- !u!65 &65888773099425038
 BoxCollider:
   m_ObjectHideFlags: 1

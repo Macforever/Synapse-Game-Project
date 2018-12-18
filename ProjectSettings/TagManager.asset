@@ -8,6 +8,7 @@ TagManager:
   - HealthPointsScreen
   - GameScoreScreen
   - CurrentAmmoScreen
+  - FireZone
   layers:
   - Default
   - TransparentFX

@@ -15,9 +15,15 @@ public class DoorController : MonoBehaviour {
         keyManager = FindObjectOfType<KeyManager>();
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.name == "Player" && keyManager.GetFoundKeys() == 5) {
-            rb.MovePosition(transform.position + transform.forward * Time.deltaTime);
+    private void OnTriggerStay(Collider other) {
+        print("Player entered Trigger Zone");
+
+        if (other.GetComponent<PlayerController>() != null && keyManager.GetFoundKeys() == 5) {
+            print("Door opens");
+            rb.MovePosition(teleportPoint);
+        } else {
+            print("Not enough Keys");
         }
+
     } 
 }

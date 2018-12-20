@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour {
  
@@ -30,5 +31,10 @@ public class InputManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space)) {
             playerController.jumpManager();
         }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Debug.Log("Holt mich hier Raus!");
+            SceneManager.LoadScene(0);
+        }
+
     }
 }

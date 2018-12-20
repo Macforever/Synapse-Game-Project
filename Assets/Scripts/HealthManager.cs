@@ -45,7 +45,7 @@ public class HealthManager : MonoBehaviour {
             myHealthScreen.text = "Health: " + playerHealth;
         }
         if (myLiveScreen.tag == "Lives") {
-            myLiveScreen.text = "Lives: " + extraLives;
+            myLiveScreen.text = "ExtraLives: " + extraLives;
         }
 
 

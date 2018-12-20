@@ -12,6 +12,7 @@ TagManager:
   - Door
   - MainMenu
   - Lives
+  - TimeLeft
   layers:
   - Default
   - TransparentFX

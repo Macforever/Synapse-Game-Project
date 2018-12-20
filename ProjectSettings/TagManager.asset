@@ -9,6 +9,7 @@ TagManager:
   - GameScoreScreen
   - CurrentAmmoScreen
   - FireZone
+  - Door
   layers:
   - Default
   - TransparentFX

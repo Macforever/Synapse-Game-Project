@@ -21,7 +21,6 @@ public class SpeedBooster : MonoBehaviour {
             Debug.Log("Picked SpeedBooster");
             Destroy(gameObject);
             playerController.BoostSpeed(boostTime, newSpeed);
-
         }
     }
 }

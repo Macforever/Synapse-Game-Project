@@ -27,9 +27,12 @@ public class PlayerController : MonoBehaviour {
     public Melee sword;
     private float oldSpeed;
 
+    public ParticleSystem speedParticles;
+
     void Start() {
         setMovespeed(5);
         moveVelocity = 0f;
+        speedParticles.Stop();
     }
 
     private void FixedUpdate() {
@@ -102,8 +105,13 @@ public class PlayerController : MonoBehaviour {
         StartCoroutine(Delay(time));
     }
     IEnumerator Delay(float boostTime) {
+        speedParticles.Play();
         yield return new WaitForSeconds(boostTime);
+        speedParticles.Stop();
         moveSpeed = oldSpeed;
+
     }
+    
+   
 
 }

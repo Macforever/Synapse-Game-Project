@@ -11,6 +11,7 @@ TagManager:
   - FireZone
   - Door
   - MainMenu
+  - Lives
   layers:
   - Default
   - TransparentFX

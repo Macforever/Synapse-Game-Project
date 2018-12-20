@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class KillPlayer : MonoBehaviour {
 
     public LevelManager levelManager;
+
 
 
 
@@ -20,7 +22,7 @@ public class KillPlayer : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.name == "Player") {
-            levelManager.RespawnPlayer();
+           levelManager.RespawnPlayer();
         }
     }
 }

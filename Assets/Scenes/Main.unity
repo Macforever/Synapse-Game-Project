@@ -3338,8 +3338,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 700484614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.86, y: 0.62000006, z: -9.89587}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 23.97, y: -0.94, z: -9.89587}
+  m_LocalScale: {x: 1, y: 1.15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -3549,7 +3549,7 @@ GameObject:
   - component: {fileID: 756006400}
   - component: {fileID: 756006399}
   - component: {fileID: 756006398}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Ammo
   m_TagString: CurrentAmmoScreen
   m_Icon: {fileID: 0}
@@ -4371,7 +4371,7 @@ GameObject:
   - component: {fileID: 852197011}
   - component: {fileID: 852197010}
   - component: {fileID: 852197009}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5551,7 +5551,7 @@ GameObject:
   - component: {fileID: 988384083}
   - component: {fileID: 988384082}
   - component: {fileID: 988384084}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HealthPoints
   m_TagString: HealthPointsScreen
   m_Icon: {fileID: 0}
@@ -7207,7 +7207,7 @@ GameObject:
   - component: {fileID: 1220636428}
   - component: {fileID: 1220636427}
   - component: {fileID: 1220636426}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GameScore
   m_TagString: GameScoreScreen
   m_Icon: {fileID: 0}

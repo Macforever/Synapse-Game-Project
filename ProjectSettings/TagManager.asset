@@ -10,6 +10,7 @@ TagManager:
   - CurrentAmmoScreen
   - FireZone
   - Door
+  - MainMenu
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Checkpoints
   - Collectibles
   - Enemies
-  - 
+  - IngameUI
   - 
   - 
   - 

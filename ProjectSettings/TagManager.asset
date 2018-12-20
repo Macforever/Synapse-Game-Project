@@ -13,6 +13,7 @@ TagManager:
   - MainMenu
   - Lives
   - TimeLeft
+  - KeysFoundScreen
   layers:
   - Default
   - TransparentFX

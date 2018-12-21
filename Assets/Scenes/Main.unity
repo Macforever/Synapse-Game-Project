@@ -516,6 +516,7 @@ Transform:
   - {fileID: 2029255314}
   - {fileID: 1948806339}
   - {fileID: 41568704}
+  - {fileID: 402779907}
   - {fileID: 1811207314}
   - {fileID: 690167334}
   - {fileID: 1953433370}
@@ -532,7 +533,6 @@ Transform:
   - {fileID: 1741312278}
   - {fileID: 1241546081}
   - {fileID: 197571278}
-  - {fileID: 402779907}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3180,7 +3180,7 @@ Transform:
   - {fileID: 1171068103}
   - {fileID: 867419806}
   m_Father: {fileID: 34882432}
-  m_RootOrder: 23
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &405060616
 Prefab:
@@ -8205,7 +8205,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameEnd
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
